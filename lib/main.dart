@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 import 'package:notes2/domain/auth/value_objects.dart';
+import 'package:notes2/injection.dart';
 
 void main() {
-//  final Either<String, String> emailText = Either.left("one");
-  runApp(MyApp());
+  configureDependencies(Environment.prod);
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Material App Bar'),
+          title: const Text('Material App Bar'),
         ),
         body: Center(
           child: Container(

@@ -697,11 +697,12 @@ class _$SignInFormStateTearOff {
   const _$SignInFormStateTearOff();
 
   _SignInFormState call(
-      {EmailAddress? emailAddress,
-      Password? password,
-      bool? showErrorMessages,
-      bool? isSubmitting,
-      Option<Either<AuthFailure, Coproduct0>>? authFailureorSuccessOption}) {
+      {required EmailAddress emailAddress,
+      required Password password,
+      required bool showErrorMessages,
+      required bool isSubmitting,
+      required Option<Either<AuthFailure, Coproduct0>>?
+          authFailureorSuccessOption}) {
     return _SignInFormState(
       emailAddress: emailAddress,
       password: password,
@@ -717,10 +718,10 @@ const $SignInFormState = _$SignInFormStateTearOff();
 
 /// @nodoc
 mixin _$SignInFormState {
-  EmailAddress? get emailAddress => throw _privateConstructorUsedError;
-  Password? get password => throw _privateConstructorUsedError;
-  bool? get showErrorMessages => throw _privateConstructorUsedError;
-  bool? get isSubmitting => throw _privateConstructorUsedError;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
+  Password get password => throw _privateConstructorUsedError;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, Coproduct0>>? get authFailureorSuccessOption =>
       throw _privateConstructorUsedError;
 
@@ -735,10 +736,10 @@ abstract class $SignInFormStateCopyWith<$Res> {
           SignInFormState value, $Res Function(SignInFormState) then) =
       _$SignInFormStateCopyWithImpl<$Res>;
   $Res call(
-      {EmailAddress? emailAddress,
-      Password? password,
-      bool? showErrorMessages,
-      bool? isSubmitting,
+      {EmailAddress emailAddress,
+      Password password,
+      bool showErrorMessages,
+      bool isSubmitting,
       Option<Either<AuthFailure, Coproduct0>>? authFailureorSuccessOption});
 }
 
@@ -763,19 +764,19 @@ class _$SignInFormStateCopyWithImpl<$Res>
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
-              as EmailAddress?,
+              as EmailAddress,
       password: password == freezed
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as Password?,
+              as Password,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       isSubmitting: isSubmitting == freezed
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       authFailureorSuccessOption: authFailureorSuccessOption == freezed
           ? _value.authFailureorSuccessOption
           : authFailureorSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -792,10 +793,10 @@ abstract class _$SignInFormStateCopyWith<$Res>
       __$SignInFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {EmailAddress? emailAddress,
-      Password? password,
-      bool? showErrorMessages,
-      bool? isSubmitting,
+      {EmailAddress emailAddress,
+      Password password,
+      bool showErrorMessages,
+      bool isSubmitting,
       Option<Either<AuthFailure, Coproduct0>>? authFailureorSuccessOption});
 }
 
@@ -822,19 +823,19 @@ class __$SignInFormStateCopyWithImpl<$Res>
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
-              as EmailAddress?,
+              as EmailAddress,
       password: password == freezed
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as Password?,
+              as Password,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       isSubmitting: isSubmitting == freezed
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       authFailureorSuccessOption: authFailureorSuccessOption == freezed
           ? _value.authFailureorSuccessOption
           : authFailureorSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -846,20 +847,20 @@ class __$SignInFormStateCopyWithImpl<$Res>
 /// @nodoc
 class _$_SignInFormState implements _SignInFormState {
   const _$_SignInFormState(
-      {this.emailAddress,
-      this.password,
-      this.showErrorMessages,
-      this.isSubmitting,
-      this.authFailureorSuccessOption});
+      {required this.emailAddress,
+      required this.password,
+      required this.showErrorMessages,
+      required this.isSubmitting,
+      required this.authFailureorSuccessOption});
 
   @override
-  final EmailAddress? emailAddress;
+  final EmailAddress emailAddress;
   @override
-  final Password? password;
+  final Password password;
   @override
-  final bool? showErrorMessages;
+  final bool showErrorMessages;
   @override
-  final bool? isSubmitting;
+  final bool isSubmitting;
   @override
   final Option<Either<AuthFailure, Coproduct0>>? authFailureorSuccessOption;
 
@@ -908,21 +909,21 @@ class _$_SignInFormState implements _SignInFormState {
 
 abstract class _SignInFormState implements SignInFormState {
   const factory _SignInFormState(
-      {EmailAddress? emailAddress,
-      Password? password,
-      bool? showErrorMessages,
-      bool? isSubmitting,
-      Option<Either<AuthFailure, Coproduct0>>?
+      {required EmailAddress emailAddress,
+      required Password password,
+      required bool showErrorMessages,
+      required bool isSubmitting,
+      required Option<Either<AuthFailure, Coproduct0>>?
           authFailureorSuccessOption}) = _$_SignInFormState;
 
   @override
-  EmailAddress? get emailAddress => throw _privateConstructorUsedError;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
   @override
-  Password? get password => throw _privateConstructorUsedError;
+  Password get password => throw _privateConstructorUsedError;
   @override
-  bool? get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
   @override
-  bool? get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
   @override
   Option<Either<AuthFailure, Coproduct0>>? get authFailureorSuccessOption =>
       throw _privateConstructorUsedError;

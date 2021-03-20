@@ -28,12 +28,17 @@ dependencies:
   flutter_bloc: null
   freezed_annotation: null
   oxidized: null
-
+  firebase_core: null 
+  firebase_auth: null
+  injectable: null
+  get_it: null
 dev_dependencies:
+  injectable_generator: null
   flutter_test:
     sdk: flutter
   build_runner: null
   freezed: null
+  lint: null
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

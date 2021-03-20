@@ -1,6 +1,5 @@
 //called i_auth because it is only an internface
 import 'package:dfunc/dfunc.dart';
-import 'package:flutter/material.dart';
 import 'package:notes2/domain/auth/auth_failure.dart';
 import 'package:notes2/domain/auth/value_objects.dart';
 
@@ -10,13 +9,13 @@ import 'package:notes2/domain/auth/value_objects.dart';
 
 abstract class IAuthFacade {
   Future<Either<AuthFailure, Coproduct0>> registerWithEmailAndPassword({
-    @required EmailAddress emailAddress,
-    @required Password password,
+    required EmailAddress emailAddress,
+    required Password password,
   });
 
   Future<Either<AuthFailure, Coproduct0>> signinWithEmailAndPassword({
-    @required EmailAddress emailAddress,
-    @required Password password,
+    required EmailAddress emailAddress,
+    required Password password,
   });
 
   //no parameters required to signin
