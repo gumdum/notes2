@@ -8,3 +8,4 @@ The XML file is my current diagram of the code structure
 It can be viewed:
 https://app.diagrams.net/#Hgumdum%2Fnotes2%2Fmaster%2Fddd_diagram.xml
 
+<img src='https://github.com/gumdum/notes2/blob/master/ddd_diagram.png'>
