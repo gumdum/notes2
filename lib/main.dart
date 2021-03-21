@@ -1,36 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:notes2/domain/auth/value_objects.dart';
 import 'package:notes2/injection.dart';
+import 'package:notes2/presentation/core/app.dart';
 
-void main() {
-  configureDependencies(Environment.prod);
-  runApp(const MyApp());
-}
+// ignore: avoid_void_async
+void main() async {
+  configureDependencies(Environment.dev);
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  //start firebase auth
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
-  @override
-  Widget build(BuildContext context) {
-    final EmailAddress emailAddress = EmailAddress("test@calvivnellisdev");
-
-    // emailAddress.value
-    //   .fold((left) => "left is $left", (right) => "right is $right");
-
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text(emailAddress.value
-                .fold((left) => "left is $left", (right) => "right is $right")),
-          ),
-        ),
-      ),
-    );
-  }
+  runApp(AppWidget());
 }
