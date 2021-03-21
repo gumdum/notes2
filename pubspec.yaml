@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  another_flushbar: null
   cupertino_icons: null
   dfunc: null
   firebase_auth: null

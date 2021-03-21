@@ -42,7 +42,7 @@ class FirebaseAuthFacade implements IAuthFacade {
   //! https://github.com/flutter/plugins/blob/master/packages/google_sign_in/google_sign_in/example/lib/main.dart
   @override
   Future<Either<AuthFailure, Coproduct0>> signInWithGoogle() async {
-    return const Either.right(Coproduct0.empty());
+    return const Either.left(AuthFailure.featureNotAvailable());
   }
 
   //!Google Sign In With Email & Password
