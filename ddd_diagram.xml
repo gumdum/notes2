@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2021-03-21T11:25:34.403Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="7JdV2UPLCZiBLxM99eUG" version="14.4.9" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-03-21T11:28:07.227Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="1mmKKEdIU0xWyf_L2_aH" version="14.4.9" type="github" pages="2">
   <diagram name="Page-1" id="9f46799a-70d6-7492-0946-bef42562c5a5">
-    <mxGraphModel dx="3245" dy="2063" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="3551" dy="2236" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="aKX5wf7xItV2oHW7xL_6-20" value="ABSTRACT CLASS" style="arcSize=10;whiteSpace=wrap;html=1;align=center;shadow=1;glass=0;rounded=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="-1021" y="1487" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="aKX5wf7xItV2oHW7xL_6-4" value="" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+        <mxCell id="aKX5wf7xItV2oHW7xL_6-4" value="" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="-819" y="939" width="699" height="358" as="geometry" />
         </mxCell>
-        <mxCell id="lxsohSyh601guUVKCXpp-2" value="" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+        <mxCell id="lxsohSyh601guUVKCXpp-2" value="" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="-90" y="937" width="838" height="360" as="geometry" />
         </mxCell>
         <mxCell id="78961159f06e98e8-123" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;startFill=0;startSize=8;endArrow=open;endFill=0;endSize=16;fontFamily=Verdana;fontSize=12;dashed=1;" parent="1" source="78961159f06e98e8-17" target="78961159f06e98e8-69" edge="1">
@@ -579,11 +579,14 @@
         <mxCell id="bsHgODxcgUkd-7nkujyU-45" value="firebase_auth_facade.dart" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="191.5" y="1394" width="165" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="33tCVoKzQKff233ljZzZ-1" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DB2843;strokeWidth=1;fillColor=none;fontColor=#DB2843;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="-377" y="623" width="287" height="159" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="4QPwdVHts79Yp1jGe9E3" name="Page-2">
-    <mxGraphModel dx="1902" dy="2070" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2860" dy="2717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="UCv09PayZ-1FwOvDbd5F-0" />
         <mxCell id="UCv09PayZ-1FwOvDbd5F-1" parent="UCv09PayZ-1FwOvDbd5F-0" />
