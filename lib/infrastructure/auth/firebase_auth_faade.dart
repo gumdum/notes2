@@ -1,16 +1,21 @@
 import 'package:dfunc/dfunc.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as fb;
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:notes2/domain/auth/auth_failure.dart';
 import 'package:notes2/domain/auth/i_auth_facade.dart';
+import 'package:notes2/domain/auth/user.dart';
 import 'package:notes2/domain/auth/value_objects.dart';
+import 'package:oxidized/oxidized.dart';
+import 'package:notes2/infrastructure/auth/firebase_user_mapper.dart';
 
 @LazySingleton(as: IAuthFacade)
 class FirebaseAuthFacade implements IAuthFacade {
-  final FirebaseAuth _firebaseAuth;
+//  final GoogleSignIn _googleSignIn;
+  final fb.FirebaseAuth _firebaseAuth;
 
   FirebaseAuthFacade(
+//    this._googleSignIn,
     this._firebaseAuth,
   );
 
@@ -68,5 +73,18 @@ class FirebaseAuthFacade implements IAuthFacade {
         return const Either.left(AuthFailure.serverError());
       }
     }
+  }
+
+  @override
+  Future<Option<User>> getSignedInUser() async {
+    return Option.some(_firebaseAuth.currentUser!.toDomain());
+  }
+
+  @override
+  Future<void> signOUt() {
+    return Future.wait([
+//      _googleSignIn.signOUt(),
+      _firebaseAuth.signOut(),
+    ]);
   }
 }
