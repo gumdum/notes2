@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:notes2/presentation/sign_in/sign_in_page.dart';
+import 'package:notes2/presentation/routes/router.gr.dart';
 
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final _appRouter = AppRouter();
+
+    return MaterialApp.router(
       title: 'Notes 2',
-      home: SignInPage(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         primaryColor: Colors.green[800],
@@ -25,6 +26,8 @@ class AppWidget extends StatelessWidget {
           ),
         ),
       ),
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

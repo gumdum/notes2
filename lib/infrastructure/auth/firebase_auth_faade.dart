@@ -6,6 +6,7 @@ import 'package:notes2/domain/auth/auth_failure.dart';
 import 'package:notes2/domain/auth/i_auth_facade.dart';
 import 'package:notes2/domain/auth/user.dart';
 import 'package:notes2/domain/auth/value_objects.dart';
+import 'package:notes2/presentation/splash/splash_page.dart';
 import 'package:oxidized/oxidized.dart';
 import 'package:notes2/infrastructure/auth/firebase_user_mapper.dart';
 
@@ -34,7 +35,7 @@ class FirebaseAuthFacade implements IAuthFacade {
         password: passwordStr,
       );
       return const Either.right(Coproduct0.empty());
-    } on PlatformException catch (e) {
+    } on fb.FirebaseAuthException catch (e) {
       if (e.code == 'email-already-in-use') {
         return const Either.left(AuthFailure.emailAlreadyInUse());
       } else {
@@ -60,13 +61,20 @@ class FirebaseAuthFacade implements IAuthFacade {
     final passwordStr = password.getOrCrash();
 
     try {
+      printMessage('Trying email signin: $emailAddressStr\n');
       await _firebaseAuth.signInWithEmailAndPassword(
         email: emailAddressStr,
         password: passwordStr,
       );
       return const Either.right(Coproduct0.empty());
-    } on PlatformException catch (e) {
-      if (e.code == 'user-not-found' || e.code == 'wrong-password') {
+    } on fb.FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        return const Either.left(AuthFailure.userNotFound());
+      } else if (e.code == 'email-already-in-use') {
+        return const Either.left(AuthFailure.emailAlreadyInUse());
+      } else if (e.code == 'user-disabled' ||
+          e.code == 'user-not-found' ||
+          e.code == 'wrong-password') {
         return const Either.left(
             AuthFailure.invalidEmailAndPasswordCombination());
       } else {

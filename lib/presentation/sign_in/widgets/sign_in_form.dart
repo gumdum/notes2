@@ -20,6 +20,7 @@ class SignInForm extends StatelessWidget {
                   emailAlreadyInUse: (_) => 'Email already in use',
                   invalidEmailAndPasswordCombination: (_) =>
                       'Invalid email and password combination',
+                  userNotFound: (_) => 'User not found',
                 ),
               ).show(context);
             },
